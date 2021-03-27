@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/bill-luu/go-Pluralsight/Go-Getting-Started/models"
+)
 
 func main() {
-	fmt.Println("Hello from a module!")
+	u := models.User{
+		ID:        2,
+		FirstName: "Bill",
+		LastName:  "Luu",
+	}
+	fmt.Println(u)
 }
