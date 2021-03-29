@@ -1,16 +1,12 @@
 package main
 
 import (
-	"fmt"
+	"net/http"
 
-	"github.com/bill-luu/go-Pluralsight/Go-Getting-Started/models"
+	"github.com/bill-luu/go-Pluralsight/Go-Getting-Started/controllers"
 )
 
 func main() {
-	u := models.User{
-		ID:        2,
-		FirstName: "Bill",
-		LastName:  "Luu",
-	}
-	fmt.Println(u)
+	controllers.RegisterControllers()
+	http.ListenAndServe(":3000", nil)
 }
